@@ -42,6 +42,7 @@ const TodoList = () => {
       <form onSubmit={guncelle}>
         <div className="input-group mb-3 w-50   m-auto">
           <input
+          value={todo}
             onChange={(e) => setTodo(e.target.value)}
             type="search"
             className="form-control"
@@ -65,9 +66,9 @@ const TodoList = () => {
             return (
               <li
                 onDoubleClick={() => ciftTikla(item.id)}
-                className={`d-flex justify-content-between h5 p-2 border border-2 rounded w-50 m-auto mt-4 list-unstyled ${
-                  item.completed ? "completed" : ""
-                }`}
+                className= {
+                  item.completed ? "text-decoration-line-through d-flex justify-content-between h5 p-2 border border-2 rounded w-50 m-auto mt-4 list-unstyled "  : "d-flex justify-content-between h5 p-2 border border-2 rounded w-50 m-auto mt-4 list-unstyled"
+                }
                 style={{ backgroundColor: "#D1E7DD" }}
                 key={item.id}
               >
