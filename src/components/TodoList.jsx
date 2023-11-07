@@ -11,9 +11,12 @@ const TodoList = () => {
 
   const guncelle = (e) => {
     e.preventDefault();
+if(todo===""){
+  alert(`yeni bir todo yaziniz.`)
+}else{
     const newTodo = { id: uuidv4(), task: todo, completed: false };
     setAll([...allTodo, newTodo]);
-    setTodo("");
+    setTodo("");}
   };
   const ciftTikla = (id) => {
     const updatedTodos = allTodo.map((item) => {
@@ -73,7 +76,7 @@ const TodoList = () => {
                 key={item.id}
               >
                 {item.task}{" "}
-                <span onClick={() => sil(item.id)} style={{ color: "red" }}>
+                <span role="button" onClick={() => sil(item.id)} style={{ color: "red" }}>
                   <BsTrashFill />
                 </span>
               </li>
