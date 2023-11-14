@@ -47,7 +47,7 @@ if(todo===""){
           <input
           value={todo}
             onChange={(e) => setTodo(e.target.value)}
-            type="search"
+            type="text"
             className="form-control"
             placeholder="Enter new Todo.."
             aria-label="Recipient's username"
